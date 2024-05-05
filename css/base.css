@@ -1,0 +1,25 @@
+/* ==================================== Global ========================================*/
+
+:root{
+    --logo-color: rgb(241, 87, 87);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+

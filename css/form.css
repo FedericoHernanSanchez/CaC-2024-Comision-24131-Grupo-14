@@ -1,0 +1,197 @@
+/* ==================================== Formulario ========================================*/
+#contactForm {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9d4a3;
+    padding: 0rem 0 2rem 0;
+}
+
+/* ==== encabezado === */
+.form__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: .5rem 0;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: snow;
+    background-color: rgba(190, 142, 94, 0.178);
+
+}
+
+/* === Imagen === */
+.formImgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.form__img {
+    width: 80%;
+}
+
+/* === inputs === */
+.inputTextForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.inputTextForm>label {
+    padding: 1rem 0 .5rem 0;
+}
+
+.inputTextForm>input[type=text],
+.inputTextForm>input[type=email],
+.inputTextForm>select,
+.inputTextForm>textarea {
+    background-color: snow;
+    border-radius: 5px;
+    width: 80%;
+    padding-left: 10px;
+}
+
+
+.inputTextForm>input[type=text],
+.inputTextForm>input[type=email],
+.inputTextForm>select {
+    height: 2rem;
+}
+
+
+.inputTextForm>textarea {
+    height: 150px;
+}
+
+.containerSubscription {
+    padding-top: 1rem;
+}
+
+/* === submit === */
+.button[type=submit] {
+    border-radius: 5px;
+    padding: .5rem 1rem;
+
+}
+
+.button[type=submit]:hover {
+    color: snow;
+    background-color: var(--logo-color);
+}
+
+/* ==================================== Media queries ========================================*/
+
+@media screen and (min-width: 768px) {
+    #contactForm {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-items: center;
+        grid-template-areas:
+            "title img"
+            "text text"
+            "send send";
+    }
+
+    /* ==== encabezado -> min-width: 768px === */
+    .form__title {
+        grid-area: title;
+        justify-self: center;
+        text-align: center;
+        font-size: 3rem;
+        background-color: transparent;
+
+
+    }
+
+    /* ==== Imagen -> min-width: 768px === */
+    .formImgContainer {
+        width: 90%;
+        grid-area: img;
+    }
+
+    .form__img {
+        width: 100%;
+        object-fit: fit;
+        margin: 1rem;
+
+    }
+
+    /* ==== Inputs -> min-width: 768px === */
+    .inputTextForm {
+        grid-area: text;
+        display: grid;
+        margin-right: 1rem;
+        grid-template-columns: 1fr 3fr;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #contactForm label {
+        align-self: baseline;
+        justify-self: end;
+        margin-right: 10px;
+    }
+
+    .inputTextForm>input[type=text],
+    .inputTextForm>input[type=email],
+    .inputTextForm>select,
+    .inputTextForm>textarea {
+        width: 100%;
+    }
+
+    .containerSubscription {
+        grid-column: 1 / 3;
+        justify-self: center;
+    }
+
+    /* ==== submit -> min-width: 768px === */
+    .button {
+        grid-area: send;
+        justify-self: center;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    #contactForm {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "title title"
+            "img  text"
+            "img send";
+    }
+
+    /* ==== encabezado -> min-width: 1200px === */
+    .form__title {
+        background-color: rgba(190, 142, 94, 0.178);
+
+    }
+
+    /* ==== Imagen -> min-width: 1200px === */
+    .formImgContainer {
+        width: 100%;
+    }
+
+    .form__img {
+        margin: 0 0 0 1rem;
+
+    }
+
+    /* ==== Inputs -> min-width: 1200px === */
+    .inputTextForm {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .inputTextForm>textarea {
+        grid-column: 2 / 5;
+    }
+
+    .containerSubscription {
+        grid-column: 1 / 5;
+    }
+}
