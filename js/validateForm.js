@@ -7,8 +7,8 @@ function validateForm() {
   const reason = document.getElementById("reason");
   const message = document.getElementById("message");
 
-  if (name.value.trim().length < 2) {
-    alert("Por favor, escribe tu nombre.");
+  if (name.value.trim().length < 2 || !/^[a-zA-Z\s]+$/.test(name.value.trim())) {
+    alert("Por favor, escribe un nombre válido (solo letras y espacios).");
     name.focus();
     return false;
   }
@@ -37,8 +37,8 @@ function validateForm() {
     return false;
   }
 
-  if (message.value.trim().length <= 10) {
-    alert("Por favor, escribe tu mensaje");
+  if (message.value.trim().length <= 19 || message.value.trim().length > 200) {
+    alert("Por favor, escribe un mensaje entre 20 y 200 caracteres.");
     message.focus();
     return false;
   }
