@@ -60,7 +60,7 @@
               <a class="nav-link" href="#">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sucursales</a>
+              <a class="nav-link" href="#businessLocation">Ubicación</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contactForm">Contacto</a>
@@ -166,6 +166,72 @@
           que te define!"
         </p>
         <p>¡Visítanos y descubre la moda que te define!</p>
+      </div>
+    </section>
+
+    <!-- Sección Ubicación (business location) -->
+    <section id="businessLocation">
+      <div class="container-fluid businessLocationContainer g-0">
+        <img
+          src="./img/store.jpg"
+          alt="Foto de la tienda"
+          class="businessImage"
+        />
+        <div class="container-fluid businessLocationInfo">
+          <h2 class="businessLocationInfo__title">Encontrános en</h2>
+          <p>Av. de la ciudad 2345, Centro</p>
+          <p>
+            <span>Horario:</span> Lunes a Viernes: 09:00 - 20:00 hs., Sábados:
+            10:00 - 18:00 hs.
+          </p>
+          <p>
+            Nuestra tienda en el corazón de la ciudad ofrece una amplia variedad
+            de ropa para todas las edades y estilos, con atención personalizada
+            y ofertas especiales.
+          </p>
+          <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#businessLocationModal"
+          >
+            Ver Mapa
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="businessLocationModal"
+        tabindex="-1"
+        aria-labelledby="businessLocationModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="businessLocationModalLabel">
+                Zara local store
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.023394802519!2d-99.13670668563566!3d19.43074744534998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f81dd792bccd%3A0x96a79cf1527d00c5!2sCalle%20Principal%20123%2C%20Centro%2C%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1648294043569!5m2!1ses-419!2smx"
+                width="100%"
+                height="400"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -306,6 +372,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="./js/showInfoLocation.js"></script>
     <script src="./js/validateForm.js"></script>
     <!-- Bootstrap -->
     <script

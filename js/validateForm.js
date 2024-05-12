@@ -1,4 +1,3 @@
-// Validación simple para el formulario
 function validateForm() {
   const name = document.getElementById("name");
   const location = document.getElementById("location");
