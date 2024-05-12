@@ -23,3 +23,11 @@ li {
     list-style: none;
 }
 
+/* ==================================== Media queries ========================================*/
+
+@media screen and (min-width: 1200px) {
+    body {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
