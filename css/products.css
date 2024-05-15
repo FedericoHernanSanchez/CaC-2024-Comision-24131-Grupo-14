@@ -1,0 +1,455 @@
+
+
+/* ===========Seccion Productos ========*/
+
+.productos-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 20px;
+}
+
+.productos-container h1{
+  color: var(--logo-color);
+  font-size: 50px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.producto-card{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.producto-card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+   
+.producto-card h5{
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.producto-card p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.buttons-card{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   margin-bottom: 15px;
+
+}
+
+.buttons-card button {
+    width: 70px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid gray;
+    
+    font-size: 15px;
+}
+
+.buttons-card button:hover {
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+
+/* ======== Seccion tipo de ropa ========== */
+
+.productSection-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 0px 20px;
+    margin-top: 70px;
+    margin-bottom: 120px;
+  }
+  
+  .product {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    max-width: 550px; 
+    aspect-ratio: 1; 
+    border-radius: 10px;
+  }
+  
+  .product img {
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+   
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .product-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .product-details h1 {
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  .product-details a {
+    background: transparent;
+    border-radius: 7px;
+    border: 1px solid white;
+    padding: 4px 10px;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .product-details a:hover {
+    color: black;
+    background-color: white;
+  }
+  
+
+  /* ============= Media queries productos ====== */
+  
+  @media screen and (max-width: 980px) {
+    .productSection-container {
+      flex-direction: column;
+      gap: 35px; 
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .productSection-container {
+      gap: 20px; 
+      margin: 0 15px;
+    }
+    
+    .product {
+      width: 100%; 
+    }
+  }
+ 
+  
+@media (max-width: 1400px) {
+  .productos {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 1020px) {
+  .productos {
+      grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+
+@media (max-width: 700px) {
+  .productos {
+      grid-template-columns: 1fr; 
+  }
+}
+  
+
+
+/*======= Modal producto ====== */
+
+.modal {
+    display: none; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+.modal-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.envio {
+  display: flex;
+  align-items: center; 
+}
+
+.envio i {
+  margin-right: 10px; 
+}
+
+.modal-info h2{
+  text-align: center;
+  margin: 15px 0px;
+  color: var(--logo-color);
+}
+
+
+.modal-info h5{
+  font-weight: 600;
+}
+
+
+.modal-info p{
+  margin: 15px 0px;
+  font-size: 20px;
+}
+
+.modal-info span{
+  font-weight: 600;
+  color: var(--logo-color);
+}
+
+.buttons-talles{
+  margin: 15px 0px;
+}
+
+
+.buttons-talles button{
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.talla {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.talla.selected {
+  background-color: gray;
+  color: white;
+}
+
+.especificaciones{
+  margin: 15px 0px;
+
+}
+
+.especificaciones ul {
+  padding: 0px;
+}
+
+.payment-options label{
+  margin-right: 10px;
+  border: none;
+}
+
+
+.modal-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  gap: 50px;
+}
+
+.modal-buttons button{
+  padding: 3px 10px;
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid gray;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-buttons button:hover {
+  background-color: gray;
+  color: white;
+}
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    overflow: hidden;
+    border: 1px solid #888;
+    max-width: 900px;
+  }
+  
+  .modal-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  
+  /* ====== Media queries modal producto ======= */
+
+  @media only screen and (max-width: 1000px) {
+    .modal-product {
+        display: flex;
+        flex-direction: column;
+      }
+      .modal-content {
+          background-color: #fefefe;
+          margin: 5% auto;
+          overflow: hidden;
+          border: 1px solid #888;
+          width: 370px;
+        }
+        .modal-info{
+          margin: 0px 15px
+        }
+    }
+  
+
+  @media only screen and (max-width: 375px) {
+    .modal-product {
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        overflow: hidden;
+        border: 1px solid #888;
+        width: 300px;
+      }
+
+  }
+  
+/*============== Seccion comentarios ========== */
+
+.coment-section{
+  margin: 30px 100px;
+}
+.coment-section h1{
+    text-align: center;
+    margin-bottom: 70px;
+    color: var(--logo-color);
+    font-size: 40px;
+}
+
+.comment-carousel {
+    position: relative;
+    overflow: hidden;
+}
+.comments-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.comment-card {
+    flex: 0 0 calc(50% - 20px); /* Cambio de ancho para mostrar dos tarjetas */
+    max-width: calc(50% - 20px); /* Cambio de ancho para mostrar dos tarjetas */
+    margin: 10px; 
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.comment-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin: 15px 0px;
+    border: 2px solid rgb(160, 75, 160);
+}
+.comment-info {
+    padding: 10px 35px;
+    text-align: center;
+}
+
+.comment-info h3{
+  color: var(--logo-color);
+  margin-bottom: 10px;
+}
+
+.comment-carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    font-size: 20px;
+    border-radius: 50%; 
+}
+
+.comment-carousel button:hover {
+    background-color: #888;
+    color: white;
+}
+
+.prev-btn {
+    left: 20px;
+}
+.next-btn {
+    right: 20px;
+}
+
+
+/* ===== Media queries comentarios */
+
+@media screen and (max-width: 900px) {
+    .comment-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .coment-section{
+      margin: 30px 80px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+  
+  .comment-card {
+    box-shadow: none;
+}
+  .coment-section{
+    margin: 30px 20px;
+  }
+
+  .prev-btn {
+    left: 5px;
+}
+.next-btn {
+    right: 5px;
+}
+}
