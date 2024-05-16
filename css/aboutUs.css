@@ -1,0 +1,36 @@
+  /* ==================================== About Us ========================================*/
+  
+  .aboutUsInfoContainer {
+      padding: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .aboutUsTitle {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--logo-color);
+  }
+
+  .aboutUsContainer>p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+  }
+
+  /* ==================================== Media queries ========================================*/
+
+  @media screen and (min-width: 1200px) {
+      #aboutUs {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+      }
+
+      .aboutUsInfoContainer {
+          display: grid;
+          align-items: center;
+          justify-items: center;
+
+      }
+  }

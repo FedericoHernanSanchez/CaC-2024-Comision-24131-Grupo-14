@@ -1,0 +1,32 @@
+/* ==================================== Header ========================================*/
+
+.navbar-nav{
+    text-align: center;
+}
+
+.header__logo{
+    max-width: 80%;
+}
+nav>a.navbar-brand{
+    width: 50%;
+}
+
+.nav-link:hover{
+    color: var(--logo-color);
+
+}
+
+
+/* ==================================== Media queries ========================================*/
+
+@media screen and (min-width: 768px) {
+    .header__logo{
+        max-width: 40%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header__logo{
+        max-width: 20%;
+    }
+}
